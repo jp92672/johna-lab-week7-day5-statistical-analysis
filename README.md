@@ -1,20 +1,27 @@
-# In God we trust, everyone else bring the data
+# Lab | Week 7 | Day 5 | In God we trust, everyone else bring the data
+## John Adams
 
-**Track:** Module 5 — Evaluation & strategy · **When:** Week 7, Day 5 · **Status:** Required
+## How to run
 
-This repository contains everything you need for this lab.
+1. Install dependencies: `numpy`, `pandas`, `matplotlib`, `seaborn`, `scipy` (1.11+), `jupyter`.
+2. Run `data_exploration.ipynb` first, it loads the raw dataset, cleans it, and saves `Data/marketing_data.csv`.
+3. Run `statistical_analysis.ipynb` next, it reads `Data/marketing_data.csv` and depends on Step 2's output existing.
 
-## Files
+## File map
 
-- [`instructions.md`](./instructions.md) — the lab instructions
-- [`rubric.md`](./rubric.md) — how your submission is graded; this is what the AI reviewer checks your PR against
+- `data_exploration.ipynb` — Part 1: loads and cleans the raw dataset, calculates key marketing metrics, saves `Data/marketing_data.csv`
+- `statistical_analysis.ipynb` — Parts 2-5: t-tests, Fisher's exact tests, multiple comparisons correction, power analysis, and business recommendations
+- `lab_summary.md` — dataset choice documentation and key insights from Part 1
+- `executive_memo.md` — final business memo with findings, budget allocation, and statistical caveats
+- `Data/raw_global_ads_performance.csv` — raw dataset as downloaded from Kaggle
+- `Data/marketing_data.csv` — cleaned dataset used by all analysis steps
+- `Outputs/` — all saved chart images referenced in the notebooks and memo
 
-## How to complete this lab
+## Setup assumptions
 
-1. **Fork** this repository.
-2. Do the work described in `instructions.md`, committing to your fork.
-3. Open a **pull request** back into this repository.
-4. You'll receive **AI feedback** on your PR based on `rubric.md`. Address any blocking feedback and push updates to the same PR.
+- Dataset: Global Ads Performance (Google, Meta, TikTok), Kaggle, https://www.kaggle.com/datasets/nudratabbas/global-ads-performance-google-meta-tiktok
+- Grouping variable: `platform` (Google Ads, Meta Ads, TikTok Ads)
+- `data_exploration.ipynb` must be run before `statistical_analysis.ipynb`, since the second notebook reads the CSV the first one produces.
 
 ## Submission hygiene
 
